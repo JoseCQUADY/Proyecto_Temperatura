@@ -10,36 +10,43 @@ public class Archivos {
     private FileReader archivo;
     private BufferedReader lector;
     private String cadena;
+    double[] datos;
+    double[] guardar_datos;
+    private Archivos leer;
+    private Mes meses;
+    private double sacar_promedio;
+    private double promedio = 0;
+    
+    
 
     
     public void Leer_txt(){
-    
+        leer = new Archivos();
+        
+        
         try {
-          archivo = new FileReader("C:\\archivo.txt"); 
+          archivo = new FileReader("C:\\Users\\You\\Desktop\\Texto\\archivo.txt"); 
           
           if(archivo.ready()){
            lector = new BufferedReader(archivo);    
-           
-           
-    
+          
            while((cadena = lector.readLine()) != null){
-               
+ 
                String strDatos = cadena;
                StringTokenizer tokens = new StringTokenizer(strDatos, " ");
                int nDatos = tokens.countTokens();
-               double[] datos=new double[nDatos];
-            
-               int i=0;
-            
-               while(tokens.hasMoreTokens()){
-            
-            
+               datos = new double[nDatos];
+       
+      
+                int i = 0;
+                
+                while(tokens.hasMoreTokens()){
                    String str=tokens.nextToken();
                    datos[i]=Double.parseDouble(str);
-                   System.out.println(datos[i]);
-                   i++;
-           
-               }
+                    
+                   i++;    
+                   
+               } 
            }
          
           }else{
@@ -47,14 +54,40 @@ public class Archivos {
           }    
     } 
     catch (IOException e) {   
-        System.out.println("Error : " + e.getMessage()); 
+        System.out.println("Error : " + e.getMessage());   
     }  
+     }
     
-  
+
+    public void leer_meses(){
+         
+        meses = new Mes();
+         int k = 0;
+        for (int j = 0 ; j <= meses.getDias() ; j++ ){
+                    
+          System.out.println(datos[j]);
+         
+         if(j == 4){
+             promedio  = datos[j] + promedio;   
+             k++;
+         }else if(j > 4 && j <= 6){
+             promedio  = datos[j] + promedio;   
+             k++;
+         }
+         
+             
+   
+         
+         }
+        
+        sacar_promedio = promedio/k ;
+        
+        System.out.println(sacar_promedio);
+      
+    
+    }
+
+    
 }
-
-  
-}
-
-
-
+    
+    

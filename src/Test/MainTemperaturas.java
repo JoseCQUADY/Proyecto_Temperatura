@@ -1,8 +1,7 @@
 
 package Test;
 
-import Dominio.Archivos;
-import Dominio.Menu;
+import Dominio.*;
 import java.util.*;
 
 
@@ -15,13 +14,13 @@ public class MainTemperaturas {
         Archivos a = new Archivos();
         a.Leer_txt();
         
+        /***
         Menu menu = new Menu();
         menu.Imprimir_opciones();
         menu.leer_opcion();
-        
-       
-        
-        
+        ***/
+      
+        a.leer_meses();
         
         
         
