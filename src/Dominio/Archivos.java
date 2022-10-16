@@ -15,10 +15,6 @@ public class Archivos {
     private float[] datos;
     private Archivos leer;
 
-
-    
-    
-
     
     public String Leer_txt(){
         

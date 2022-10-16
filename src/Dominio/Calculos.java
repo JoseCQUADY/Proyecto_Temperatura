@@ -1,6 +1,8 @@
 
 package Dominio;
 
+import javax.swing.JOptionPane;
+
 
 
 public class Calculos {
@@ -20,13 +22,13 @@ public class Calculos {
          float promedio = 0;
          
          for(int i = 0; i<m.length;i++){
-             promedio = promedio +m[i];   
+             promedio = promedio + m[i];
+            
          }
          
          promedio_mensual = promedio/m.length;
          
-         System.out.println("El promedio del mes de "+ leer.Mes_letras(meses) + " es de : " + promedio_mensual );
-            
+         JOptionPane.showMessageDialog(null,"El promedio del mes de "+ leer.Mes_letras(meses) + " es de : " + promedio_mensual );  
      }
      
      public void promedio_anual(){
@@ -40,7 +42,8 @@ public class Calculos {
              promedio = promedio +m[i];   
          }
           promedio_anual = promedio/m.length;   
-          System.out.println("El promedio anual es de : " + promedio_anual );
+          JOptionPane.showMessageDialog(null,"El promedio anual es de : " + promedio_anual);
+          
      }
      
      public void max_min(int meses) {
@@ -64,7 +67,7 @@ public class Calculos {
        this.max = max_1;
        this.min = min_1;
        
-       System.out.println("La temperatura máxima del mes de "+ leer.Mes_letras(meses) +" es de: " + max + " y la minima es de : " + min );
+       JOptionPane.showMessageDialog(null, "La temperatura máxima del mes de " + leer.Mes_letras(meses) +" es de: " + max + " y la minima es de : " + min);
      }
 
     

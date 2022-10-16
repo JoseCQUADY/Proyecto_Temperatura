@@ -18,12 +18,13 @@ public class Mes {
         Archivos archivo;
         mes_1 = new float[0];
         archivo =  new Archivos();
+        
         archivo.Leer_txt();
         archivo.Strigtokenizer();
        
         switch(meses){
-            case 1 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), 0, dias);
-            case 2 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), dias,dias*2);
+            case 1 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), 0, 30);
+            case 2 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), 30,60);
             case 3 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), dias*2,dias*3);
             case 4 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), dias*3,dias*4);
             case 5 -> mes_1 = Arrays.copyOfRange(archivo.Strigtokenizer(), dias*4,dias*5);
