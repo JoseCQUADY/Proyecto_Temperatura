@@ -2,7 +2,7 @@
 package Test;
 
 import Dominio.*;
-import java.util.*;
+
 
 
 public class MainTemperaturas {
@@ -10,19 +10,14 @@ public class MainTemperaturas {
     
     public static void main(String[] args) {
       
-        
-        Archivos a = new Archivos();
-        a.Leer_txt();
-        
-        /***
-        Menu menu = new Menu();
-        menu.Imprimir_opciones();
-        menu.leer_opcion();
-        ***/
+      Menu menu = new Menu();
+      menu.Imprimir_opciones();
+      menu.leer_opciones_menu();
+      menu.arrojar_respuestas();
+     
       
-        a.leer_meses();
-        
-        
+     
+       
         
 
         }    
